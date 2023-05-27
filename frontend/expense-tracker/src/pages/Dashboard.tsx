@@ -21,7 +21,6 @@ const Dashboard: React.FC = () => {
 
   return (
     <div>
-      <h2>Dashboard</h2>
       <div>
         <h3>Expense Patterns</h3>
         {expenseData ? (
@@ -29,7 +28,7 @@ const Dashboard: React.FC = () => {
             <Pie
               data={expenseData}
               dataKey="value"
-              nameKey="type"
+              nameKey="description"
               cx="50%"
               cy="50%"
               outerRadius={80}

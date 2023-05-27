@@ -1,28 +1,33 @@
 import React from 'react';
 import { Expense } from '../types/Expense';
+import './ExpenseItem.css';
 
 interface ExpenseItemProps {
-  expense: Expense;
-  onDeleteExpense: (id: string) => void;
+    expense: Expense;
+    onDeleteExpense: (id: string) => void;
 }
 
 const ExpenseItem: React.FC<ExpenseItemProps> = ({ expense, onDeleteExpense }) => {
-  const { id, description, amount, date } = expense;
+    const { _id, description, value, date } = expense;
+    console.log(`Expense`, expense)
+    const handleDeleteExpense = () => {
+        onDeleteExpense(_id);
+    };
 
-  const handleDeleteExpense = () => {
-    onDeleteExpense(id);
-  };
-
-  return (
-    <li>
-      <div>
-        <h3>{description}</h3>
-        <p>{amount}</p>
-        <p>{date.toISOString()}</p>
-      </div>
-      <button onClick={handleDeleteExpense}>Delete</button>
-    </li>
-  );
+    return (
+        <>
+            <li className="expense-item">
+                <div className="expense-item__info">
+                    <h3 className="expense-item__description">{description}</h3>
+                    <p className="expense-item__value">Value: {value}</p>
+                    {/* <p className="expense-item__date">Date: {date}</p> */}
+                </div>
+                <button className="expense-item__delete-btn" onClick={handleDeleteExpense}>
+                    Delete
+                </button>
+            </li>
+        </>
+    );
 };
 
 export default ExpenseItem;

@@ -8,16 +8,13 @@ const App: React.FC = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/expenses">Expenses</Link>
-            </li>
-          </ul>
-        </nav>
+      <nav className="navbar">
+      <h1 className="navbar__logo">Expense Tracker</h1>
+      <ul className="navbar__links">
+        <li className="navbar__link"><Link to="/">Dashboard</Link></li>
+        <li className="navbar__link"><Link to="/expenses">Expenses</Link></li>
+      </ul>
+    </nav>
 
         <Routes>
           <Route path="/" element={<Dashboard />} />

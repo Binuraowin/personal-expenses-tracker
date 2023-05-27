@@ -16,7 +16,7 @@ const ExpenseList: React.FC<ExpenseListProps> = ({ expenses, onDeleteExpense }) 
     <ul>
       {expenses.map((expense) => (
         <ExpenseItem
-          key={expense.id}
+          key={expense._id}
           expense={expense}
           onDeleteExpense={onDeleteExpense}
         />

@@ -1,0 +1,26 @@
+.expense-list {
+    margin-bottom: 20px;
+  }
+  
+  .expense-list__filter {
+    margin-bottom: 10px;
+  }
+  
+  .expense-list__filter select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .expense-list__filter select:hover,
+  .expense-list__filter select:focus {
+    border-color: #888;
+  }
+  
+  .expense-list__filter select option {
+    font-size: 1rem;
+  }
+  

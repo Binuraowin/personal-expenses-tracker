@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Expenses from './pages/Expenses';
 import './App.css'; 
+import UpdateExpense from './components/UpdateExpense';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/expenses" element={<Expenses />} />
+          <Route path="/expenses/update/:id" element={<UpdateExpense/>} />
         </Routes>
       </div>
     </Router>

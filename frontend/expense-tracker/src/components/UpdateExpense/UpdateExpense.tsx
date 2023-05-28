@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
-import { Expense } from '../types/Expense';
+import { Expense } from '../../types/Expense';
 import './UpdateExpense.css'; // Import the CSS file
 
 interface UpdateExpenseParams {

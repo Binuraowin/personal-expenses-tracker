@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Expense } from '../types/Expense';
+import { Expense } from '../../types/Expense';
 import './ExpenseForm.css';
 
 interface ExpenseFormProps {

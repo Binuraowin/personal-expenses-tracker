@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Expense } from '../types/Expense';
+import { Expense } from '../../types/Expense';
 import './ExpenseItem.css';
 import { RiPencilFill, RiDeleteBin2Fill } from 'react-icons/ri';
 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Expenses from './pages/Expenses';
 import './App.css'; 
-import UpdateExpense from './components/UpdateExpense';
+import UpdateExpense from './components/UpdateExpense/UpdateExpense';
 
 const App: React.FC = () => {
   return (

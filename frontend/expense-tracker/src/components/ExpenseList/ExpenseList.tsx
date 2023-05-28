@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ExpenseItem from './ExpenseItem';
-import { Expense } from '../types/Expense';
+import ExpenseItem from '../ExpenseItem/ExpenseItem';
+import { Expense } from '../../types/Expense';
 import './ExpenseList.css';
 
 interface ExpenseListProps {

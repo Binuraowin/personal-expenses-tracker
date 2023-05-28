@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Expense } from '../../types/Expense';
 import './ExpenseForm.css';
+import useExpenseCRUD from '../../hooks/useExpenseCRUD';
 
-interface ExpenseFormProps {
-    onAddExpense: (expense: Expense) => void;
-}
-
-const ExpenseForm: React.FC<ExpenseFormProps> = ({ onAddExpense }) => {
+const ExpenseForm: React.FC<any> = () => {
+    const { addExpense} = useExpenseCRUD();
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
     const [date, setDate] = useState('');
@@ -21,7 +19,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({ onAddExpense }) => {
             date: new Date(date),
         };
 
-        onAddExpense(expense);
+        addExpense(expense);
         setDescription('');
         setValue('');
         setDate('');

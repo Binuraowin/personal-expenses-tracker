@@ -3,9 +3,6 @@ import { useParams, useNavigate  } from 'react-router-dom';
 import { Expense } from '../../types/Expense';
 import './UpdateExpense.css'; // Import the CSS file
 
-interface UpdateExpenseParams {
-  id: string;
-}
 
 const UpdateExpense: React.FC = () => {
   const { id } = useParams<any>();
@@ -75,10 +72,6 @@ const UpdateExpense: React.FC = () => {
           Value:
           <input type="number" name="value" value={expense.value} onChange={handleInputChange} />
         </label>
-        {/* <label className="form-group">
-          Date:
-          <input type="date" name="date" value={expense.date.toISOString().split('T')[0]} onChange={handleInputChange} />
-        </label> */}
         <div className='expense-form__actions'>
         <button type="submit" className="submit-button">Update</button>
         </div>
